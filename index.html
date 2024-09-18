@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douglas Engelbart - Innovator of HCI</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #282c34;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .bio-image {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            max-width: 300px;
+            max-height: 200px;
+            z-index: 10; /* Ensure the image stays above the content */
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .text-content {
+            width: calc(100% - 340px); /* Adjust based on image size */
+            margin-right: 320px; /* Space for the image */
+        }
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+        p, ul {
+            margin: 0 0 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .read-more {
+            display: inline-block;
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .more-info {
+            display: none;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease-in;
+        }
+        .fade-in.visible {
+            opacity: 1;
+        }
+        footer {
+            background-color: #282c34;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Douglas Engelbart: Innovator of HCI</h1>
+    </header>
+
+    <div class="content">
+        <div class="bio-image">
+            <img src="https://images.techhive.com/images/idge/imported/article/ctw/2013/07/03/engelbart_mouse_338-100390379-orig.png?auto=webp&quality=85,70" alt="Douglas Engelbart with the computer mouse">
+        </div>
+
+        <div class="text-content">
+            <h2>Introduction</h2>
+            <p>Douglas Engelbart was an influential American engineer and inventor whose innovations laid the foundation for modern computing and Human-Computer Interaction (HCI). Best known for inventing the computer mouse, Engelbart's visionary work in the 1960s and 70s transformed the way humans interact with technology.</p>
+
+            <span class="read-more" onclick="toggleInfo()">Read More</span>
+
+            <div class="more-info fade-in">
+                <h2>Early Life and Education</h2>
+                <p>Douglas Carl Engelbart was born on January 30, 1925, in Portland, Oregon. After earning a degree in electrical engineering from Oregon State University, he served in the Navy during World War II. Engelbart later earned his master's and doctoral degrees in electrical engineering from the University of California, Berkeley.</p>
+
+                <h2>Major Contributions to HCI</h2>
+                <ul>
+                    <li><strong>The Computer Mouse (1963):</strong> Engelbart's most famous invention, the computer mouse, revolutionized human-computer interaction by providing a simple, intuitive way to interact with computers.</li>
+                    <li><strong>The "Mother of All Demos" (1968):</strong> During this historic event, Engelbart demonstrated groundbreaking technologies like video conferencing, hypertext, and collaborative document editing.</li>
+                    <li><strong>Collaborative Computing and Hypertext:</strong> Engelbart's work on hypertext and collaborative computing laid the groundwork for networked computing and the internet.</li>
+                </ul>
+
+                <h2>Legacy in HCI</h2>
+                <p>Douglas Engelbart's contributions to HCI have shaped the design of user-friendly interfaces and networked systems that empower people today. His work continues to inspire innovations in computing and collaboration.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Douglas Engelbart Tribute. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleInfo() {
+            const moreInfo = document.querySelector('.more-info');
+            const fadeIn = document.querySelector('.fade-in');
+
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+                fadeIn.classList.add('visible');
+            } else {
+                moreInfo.style.display = "none";
+                fadeIn.classList.remove('visible');
+            }
+        }
+    </script>
+
+</body>
+</html>
